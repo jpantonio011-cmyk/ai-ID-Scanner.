@@ -1,0 +1,54 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>ID Scanner · Oxford AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>🪪 ID Scanner</h1>
+    <div class="subhead">Upload a student ID photo — get the name, course, year & section.</div>
+
+    <!-- upload area -->
+    <div class="upload-area" id="dropZone">
+      <label for="fileInput" class="file-input-label">
+        <span>📸</span> Choose ID photo
+      </label>
+      <input type="file" id="fileInput" accept="image/jpeg,image/png,image/gif,image/webp" />
+      <div class="preview-row">
+        <div id="previewContainer" class="preview-placeholder">🖼️</div>
+      </div>
+    </div>
+
+    <!-- action buttons -->
+    <div class="button-group">
+      <button class="btn-primary" id="scanBtn" disabled>
+        <span>🔍</span> Scan ID
+      </button>
+      <button class="btn-secondary" id="cancelBtn" disabled>
+        ✖ Cancel
+      </button>
+    </div>
+
+    <!-- status / loading / error -->
+    <div class="status-message" id="statusMsg"></div>
+
+    <!-- result card -->
+    <div class="result-card" id="resultCard" style="display: none;">
+      <div class="result-title">
+        <span>📋</span> Student information
+      </div>
+      <div id="responseText" class="ai-response"></div>
+    </div>
+
+    <div class="footer-note">
+      Oxford AI · available in the Philippines · max 1 image, 5MB
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
